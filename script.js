@@ -29,7 +29,10 @@ $(document).on("pagecreate",function(event){
 
 
 $(document).bind("pageinit", function(){
-    $('#first_link').trigger('click');
+    	setTimeout(function(){
+    		$('#first_link').trigger('click');
+    	}, 100);
+
     
     $('#pop1').on('popupafterclose', function(){
     	setTimeout(function(){
@@ -41,7 +44,7 @@ $(document).bind("pageinit", function(){
     	setTimeout(function(){
     		$('#third_link').trigger('click');    
     	}, 100);
-    });    
+    });
 });
 
 /*
