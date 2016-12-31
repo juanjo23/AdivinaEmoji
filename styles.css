@@ -11,7 +11,7 @@ body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 	float: left;
 	padding: 10px;
 	box-sizing: border-box;
-	border: 5px solid #3144E8;
+	border: 2px solid #2869AD;
 
 }
 .image img{
@@ -48,6 +48,9 @@ body, .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
 /* Tablet */
 
 @media (min-width : 768px) {
+	.square {
+		border-width: 5px;
+	}
 	.text {
 		font-size: 50px; 
 	}
