@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Chocolate que parece popo</title>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js"></script>
+</head>
+<body>
+
+	<a href="#pop1" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="first_link" >First</a>
+	<a href="#pop2" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="second_link" > Second</a>
+	<a href="#pop3" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="third_link" > Second</a>
+	
+	<div data-role="popup" id="pop1" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+	    <div data-role="header" data-theme="a">
+	    <h1>Piensa un número de 2 dígitos</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	        <h3 class="ui-title">Piensa un número de 2 dígitos</h3>
+	        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">Listo</a>
+	    </div>
+	</div>
+
+	<div data-role="popup" id="pop2" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+	    <div data-role="header" data-theme="a">
+	    <h1>Suma los digitos y réstaselos al número que pensaste</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	        <h3 class="ui-title">Suma los digitos y réstaselos al número que pensaste</h3>
+	        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Listo</a>
+	    </div>
+	</div>
+
+	<div data-role="popup" id="pop3" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
+	    <div data-role="header" data-theme="a">
+	    <h1>Ubica el emoji de tu número y toca en cualquier parte de la pantalla</h1>
+	    </div>
+	    <div role="main" class="ui-content">
+	        <h3 class="ui-title">Ubica el emoji de tu número y toca en cualquier parte de la pantalla</h3>
+	        <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Listo</a>
+	    </div>
+	</div>
+
+
+
+		<script>
+			var nums = get_random_nums();
+			cont = 1;
+			document.write('<div id="emojis" onclick="show_emoji(nums[8])">');
+			for (var i = 0; i <= 10; i++) {
+				for (var j = 0; j < nums.length; j++) {
+					n = nums[j];
+					document.write('<div class="square"> <div class="image"> <img src="images/'+ n +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
+					cont ++;
+				}					
+			}
+			document.write('<div class="square"> <div class="image"> <img src="images/'+ nums[0] +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
+			document.write('</div>');
+		</script>
+					
+<div id="result">	
+		<div class="result-text">	
+				Tu emoji es:
+		</div>
+		<div class="result-image">	
+				<img id="img-result" src="images/1.png" >
+
+		</div>
+</div>	
+
+</body>
+</html>
