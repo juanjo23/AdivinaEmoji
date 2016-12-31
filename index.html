@@ -4,75 +4,44 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>AdivinaEmoji</title>
-	<link rel="stylesheet" href="vendor/css/jquery.mobile-1.4.5.min.css">
+	<link rel="stylesheet" href="vendor/css/sweetalert.css">
 	<link rel="stylesheet" href="styles.css">
 
 	<script src="vendor/js/jquery-1.11.1.min.js"></script>
-	<script src="vendor/js/jquery.mobile-1.4.5.min.js"></script>
+	<script src="vendor/js/sweetalert.min.js"></script>
 	<script src="script.js"></script>
 </head>
 <body>
 
-	<a href="#pop1" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="first_link" >First</a>
-	<a href="#pop2" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="second_link" > Second</a>
-	<a href="#pop3" data-rel="popup" data-position-to="window" data-transition="flip"  class="invisible" id="third_link" > Second</a>
-	
-	<div data-role="popup" id="pop1" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-	    <div data-role="header" data-theme="a">
-	    <h1>Piensa un número de 2 dígitos</h1>
-	    </div>
-	    <div role="main" class="ui-content">
-	        <h3 class="ui-title">Piensa un número de 2 dígitos</h3>
-	        <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Listo</a>
-	    </div>
-	</div>
 
-	<div data-role="popup" id="pop2" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-	    <div data-role="header" data-theme="a">
-	    <h1>Suma los digitos y réstaselos al número que pensaste</h1>
-	    </div>
-	    <div role="main" class="ui-content">
-	        <h3 class="ui-title">Suma los digitos y réstaselos al número que pensaste</h3>
-	        <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Listo</a>
-	    </div>
-	</div>
-
-	<div data-role="popup" id="pop3" data-overlay-theme="b" data-theme="b" data-dismissible="false" style="max-width:400px;">
-	    <div data-role="header" data-theme="a">
-	    <h1>Ubica el emoji de tu número y toca en cualquier parte de la pantalla</h1>
-	    </div>
-	    <div role="main" class="ui-content">
-	        <h3 class="ui-title">Ubica el emoji de tu número y toca en cualquier parte de la pantalla</h3>	        
-	        <a href="#" data-role="button" data-inline="true" data-rel="back" data-theme="c">Listo</a>
-	    </div>
-	</div>
-
-
-
-		<script>
-			var nums = get_random_nums();
-			cont = 1;
-			document.write('<div id="emojis" onclick="show_emoji(nums[8])">');
-			for (var i = 0; i <= 10; i++) {
-				for (var j = 0; j < nums.length; j++) {
-					n = nums[j];
-					document.write('<div class="square"> <div class="image"> <img src="images/'+ n +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
-					cont ++;
-				}					
-			}
-			document.write('<div class="square"> <div class="image"> <img src="images/'+ nums[0] +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
-			document.write('</div>');
-		</script>
+	<script>
+		var nums = get_random_nums();
+		cont = 1;
+		document.write('<div id="emojis" class="clearfix" onclick="show_emoji(nums[8])">');
+		for (var i = 0; i <= 10; i++) {
+			for (var j = 0; j < nums.length; j++) {
+				n = nums[j];
+				document.write('<div class="square"> <div class="image"> <img src="images/'+ n +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
+				cont ++;
+			}					
+		}
+		document.write('<div class="square"> <div class="image"> <img src="images/'+ nums[0] +'.png" alt=""> </div> <div class="text"> '+ cont +' </div> </div>');
+		document.write('</div>');
+	</script>
 					
 <div id="result">	
-		<div class="result-text">	
-				Tu emoji es:
-		</div>
-		<div class="result-image">	
-				<img id="img-result" src="images/1.png" >
-
-		</div>
+	<div class="result-text">Tu emoji es:</div>
+	<div class="result-image">	
+		<img id="img-result" src="" >
+	</div>
+	<a href="#" class="button" onclick="location.reload();">Otra vez</a>
 </div>	
+
+
+<div class="footer">
+	<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>	
+</div>
+
 
 </body>
 </html>
