@@ -46,3 +46,6 @@ $( document ).ready(function() {
 	});  
 });
 
+$('#emojis').imagesLoaded( function() {
+  console.log("Images have loaded");
+});

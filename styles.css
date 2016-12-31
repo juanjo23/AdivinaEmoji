@@ -11,7 +11,7 @@ body{
 	float: left;
 	padding: 10px;
 	box-sizing: border-box;
-	background-color: rgb(140, 212, 245);	
+	background-color: #7EDBEF;
 	border: 2px solid #2869AD;
 
 }
@@ -58,7 +58,7 @@ body{
 
 .button {
 	display: inline-block;
-	background-color: #8CD4F5;
+	background-color: #30C9E9;
 	color: white;
 	border: none;
 	box-shadow: none;
@@ -89,6 +89,6 @@ body{
 		width: 16.66%;	
 	}
 	.result-image img {
-		width: 33.33%;
+		width: 30%;
 	}
 }
