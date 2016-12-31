@@ -29,21 +29,20 @@ $(document).on("pagecreate",function(event){
 
 
 $(document).bind("pageinit", function(){
-    	setTimeout(function(){
-    		$('#first_link').trigger('click');
-    	}, 100);
-
+	setTimeout(function(){
+		$('#first_link').trigger('click');
+	}, 500);
     
     $('#pop1').on('popupafterclose', function(){
     	setTimeout(function(){
     		$('#second_link').trigger('click');    
-    	}, 100);
+    	}, 500);
     });    
 
 	$('#pop2').on('popupafterclose', function(){
     	setTimeout(function(){
     		$('#third_link').trigger('click');    
-    	}, 100);
+    	}, 500);
     });
 });
 
