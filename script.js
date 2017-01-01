@@ -31,14 +31,14 @@ $( document ).ready(function() {
   },
 	function(){
     swal({
-      title: "Al número que pensaste, réstale la suma de sus digitos",
+      title: "Suma los digitos y réstaselos al número que pensaste",
       imageUrl: "images/calculating.png",
       confirmButtonText: "Listo",
       closeOnConfirm: false
     },
     function(){
       swal({
-        title: "Ubica tu emoji y toca cualquier parte de la pantalla",
+        title: "Ubica el emoji del resultado y toca cualquier parte de la pantalla",
         imageUrl: "images/decree.png",
         confirmButtonText: "Listo",
       });
