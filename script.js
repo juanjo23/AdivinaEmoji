@@ -38,7 +38,7 @@ $( document ).ready(function() {
     },
     function(){
       swal({
-        title: "Ubica el emoji del resultado y toca cualquier parte de la pantalla",
+				title: "Busca el emoji corresponiente a tu número y toca en cualquier parte de la pantalla",
         imageUrl: "images/decree.png",
         confirmButtonText: "Listo",
       });
