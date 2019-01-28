@@ -2,6 +2,6 @@
 
 Adivina el emoji del número que pensaste
 
-**Demo: [https://juanjo23.github.io/AdivinaEmoji/](https://juanjo23.github.io/AdivinaEmoji/)**
+**Demo: [https://juanjoms.github.io/AdivinaEmoji/](https://juanjoms.github.io/AdivinaEmoji/)**
 
 ![cover](images/cover.png)
